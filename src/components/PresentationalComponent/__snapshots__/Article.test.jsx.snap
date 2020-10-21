@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Article component renders Article 1`] = `
+<DocumentFragment>
+  <div
+    href="http://techcrunch.com/2020/10/21/paypal-to-let-you-buy-and-sell-cryptocurrencies-in-the-us/"
+    target="_blank"
+  >
+    <h3>
+      Test Title
+    </h3>
+    <span>
+      by Earthworm Jim
+    </span>
+    <p>
+      This is a description of the article
+    </p>
+  </div>
+</DocumentFragment>
+`;
