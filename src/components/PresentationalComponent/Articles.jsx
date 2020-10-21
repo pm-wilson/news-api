@@ -15,7 +15,14 @@ const Articles = ({ articles }) => (
 );
 
 Articles.propTypes = {
-  articles: PropTypes.arrayOf(),
+  articles: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string.isRequired,
+      author: PropTypes.string.isRequired,
+      description: PropTypes.string.isRequired,
+      url: PropTypes.string.isRequired
+    })
+  ),
 };
 
 export default Articles;
