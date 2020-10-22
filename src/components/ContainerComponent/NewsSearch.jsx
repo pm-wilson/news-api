@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import Articles from '../PresentationalComponent/Articles';
 import Search from '../PresentationalComponent/Search';
-import { getNews } from './getNews-api';
+import { getNews } from '../../services/getNews-api';
+import Loading from './Loading';
 
 class NewsSearch extends Component {
   state = {
     text: '',
     articles: [],
+    loading: false,
   }
 
   handleChange = ({ target }) => {
@@ -14,12 +16,19 @@ class NewsSearch extends Component {
   }
 
   handleSubmit = (e) => {
+    const randomLoadTime = Math.floor(Math.random() * 1000) + 500;
+
     e.preventDefault();
 
-    getNews(this.state.text)
-      .then(data => {
-        this.setState({ articles: data.articles });
-      });
+    this.setState({ loading: true });
+    setTimeout(() => {
+      getNews(this.state.text)
+        .then(data => {
+          this.setState({ articles: data.articles });
+        });
+
+      this.setState({ loading: false });
+    }, randomLoadTime);
   }
   
   render() {
@@ -30,9 +39,7 @@ class NewsSearch extends Component {
           onChange={this.handleChange} 
           onSubmit={this.handleSubmit}
         />
-        <Articles 
-          articles={this.state.articles}
-        />
+        {this.state.loading ? <Loading /> : <Articles articles={this.state.articles} />}
       </div>
     );
   }

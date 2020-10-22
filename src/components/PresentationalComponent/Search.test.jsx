@@ -7,7 +7,8 @@ describe('Search component', () => {
   it('renders Search', () => {
     const { asFragment } = render(<Search 
       text="search text"
-      handleChange={() => {}}
+      onChange={() => {}}
+      onSubmit={() => {}}
     />);
     expect(asFragment()).toMatchSnapshot();
   });

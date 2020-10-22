@@ -14,7 +14,7 @@ const Articles = ({ articles }) => {
   ));
 
   return (
-    <div>
+    <div data-testid="articles">
       <h1>Articles:</h1>
       {articleElements}
     </div>

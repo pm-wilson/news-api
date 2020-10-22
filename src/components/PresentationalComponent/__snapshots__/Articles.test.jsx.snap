@@ -2,6 +2,40 @@
 
 exports[`Articles component renders Articles 1`] = `
 <DocumentFragment>
-  <div />
+  <div
+    data-testid="articles"
+  >
+    <h1>
+      Articles:
+    </h1>
+    <div
+      href="http://techcrunch.com/2020/10/21/paypal-to-let-you-buy-and-sell-cryptocurrencies-in-the-us/"
+      target="_blank"
+    >
+      <h3>
+        PayPal to let you buy and sell cryptocurrencies in the US
+      </h3>
+      <span>
+        by Romain Dillet
+      </span>
+      <p>
+        PayPal has partnered with cryptocurrency company Paxos to launch a new service. PayPal users in the U.S. will soon be able to buy, hold and sell cryptocurrencies. More countries are coming soon. PayPal plans to support Bitcoin, Ethereum, Bitcoin Cash and Lite…
+      </p>
+    </div>
+    <div
+      href="https://www.theverge.com/2020/10/21/21527288/paypal-cryptocurrency-support-buy-sell-venmo-bitcoin"
+      target="_blank"
+    >
+      <h3>
+        PayPal and Venmo will offer and accept cryptocurrency for all online payments
+      </h3>
+      <span>
+        by Nick Statt
+      </span>
+      <p>
+        PayPal is joining the cryptocurrency industry with support for bitcoin and other digital currencies, making the digital payments company one of the most significant adopters of the technology to date. PayPal plans to extend support to its money-sending app Ve…
+      </p>
+    </div>
+  </div>
 </DocumentFragment>
 `;
