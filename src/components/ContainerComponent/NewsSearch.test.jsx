@@ -1,11 +1,11 @@
 import React from 'react';
-import { render, cleanup } from '@testing-library/react';
+import { render, cleanup, screen } from '@testing-library/react';
 import NewsSearch from './NewsSearch';
 
-describe('App component', () => {
+describe('NewsSearch component', () => {
   afterEach(() => cleanup());
-  it('renders App', () => {
-    const { asFragment } = render(<App />);
+  it('renders NewsSearch', () => {
+    const { asFragment } = render(<NewsSearch />);
     //expect(asFragment()).toMatchSnapshot();
     expect(true).toEqual(true);
   });

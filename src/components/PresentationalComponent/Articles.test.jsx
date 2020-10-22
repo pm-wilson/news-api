@@ -2,7 +2,7 @@ import React from 'react';
 import { render, cleanup } from '@testing-library/react';
 import Articles from './Articles';
 
-describe('App component', () => {
+describe('Articles component', () => {
   const data = [
     {
       'source': {
@@ -32,7 +32,7 @@ describe('App component', () => {
   ];
 
   afterEach(() => cleanup());
-  it('renders App', () => {
+  it('renders Articles', () => {
     const { asFragment } = render(<Articles articles={data}/>);
     expect(asFragment()).toMatchSnapshot();
   });
